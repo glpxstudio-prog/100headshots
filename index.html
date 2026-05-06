@@ -1,0 +1,1213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>100 Headshots · Orlando · $100 Professional Portrait Sessions</title>
+<meta name="description" content="$100 professional headshot in Orlando. 15-minute studio session at Santoku Studios. One fully edited print-ready image. By GLPX Studio." />
+<meta name="theme-color" content="#F0EDE8" />
+
+<!-- Open Graph -->
+<meta property="og:title" content="100 Headshots · Orlando · $100 Professional Portrait Sessions" />
+<meta property="og:description" content="$100. 15 minutes. One fully edited print-ready headshot. Studio session in Orlando by GLPX Studio." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://100headshots.com" />
+<meta property="og:locale" content="en_US" />
+
+<!-- Google Fonts: Anton (condensed display), JetBrains Mono (technical), Lora (italic asides) -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=JetBrains+Mono:wght@400;500;600&family=Lora:ital,wght@1,400;1,500&display=swap" rel="stylesheet" />
+
+<!-- ============================================================
+     META PIXEL — drop your pixel ID into the placeholder below
+     ============================================================
+<!-- META_PIXEL_ID -->
+<!-- Example:
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', 'YOUR_PIXEL_ID_HERE');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID_HERE&ev=PageView&noscript=1" /></noscript>
+-->
+
+<style>
+  /* ============================================================
+     SYSTEMATIC SIGNAL — design tokens
+     ============================================================ */
+  :root {
+    --paper:        #F0EDE8;     /* cream paper stock */
+    --ink:          #111111;     /* near-black, stamped metal */
+    --ink-soft:     #2a2a2a;
+    --ink-mute:     #6b6b65;     /* muted body grey */
+    --coral:        #E8625C;     /* surgical accent */
+    --rule:         #1111111a;   /* hairline rules */
+    --rule-strong:  #11111133;
+    --slate:        #d8d4cc;     /* placeholder gray on cream */
+
+    --font-display: 'Anton', 'Bebas Neue', 'Oswald', Impact, sans-serif;
+    --font-mono:    'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace;
+    --font-serif:   'Lora', Georgia, 'Times New Roman', serif;
+    --font-sans:    -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, system-ui, sans-serif;
+
+    --max:    1240px;
+    --gutter: 28px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--font-sans);
+    font-size: 16px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  img { max-width: 100%; display: block; }
+  a   { color: inherit; }
+
+  /* Paper grain — subtle so it doesn't fight content */
+  body::before {
+    content: "";
+    position: fixed; inset: 0;
+    pointer-events: none;
+    background-image:
+      radial-gradient(rgba(17,17,17,0.018) 1px, transparent 1px);
+    background-size: 3px 3px;
+    z-index: 0;
+  }
+
+  /* ============================================================
+     LAYOUT — generous gutters, content breathes
+     ============================================================ */
+  .wrap {
+    width: 100%;
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 0 var(--gutter);
+    position: relative;
+    z-index: 1;
+  }
+
+  section { padding: 88px 0; position: relative; }
+  @media (max-width: 768px) { section { padding: 56px 0; } }
+
+  /* Hairline rule — surgical cleanliness */
+  .rule {
+    border: 0;
+    border-top: 1px solid var(--rule-strong);
+    margin: 0;
+  }
+
+  /* Registration marks (+) at four corners of major blocks */
+  .reg-frame { position: relative; }
+  .reg-frame::before,
+  .reg-frame::after,
+  .reg-frame > .reg-bl,
+  .reg-frame > .reg-br {
+    position: absolute;
+    width: 16px; height: 16px;
+    color: var(--coral);
+    font-family: var(--font-mono);
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1;
+    text-align: center;
+    pointer-events: none;
+  }
+  .reg-frame::before { content: "+"; top: 12px;    left: 12px; }
+  .reg-frame::after  { content: "+"; top: 12px;    right: 12px; }
+  .reg-frame > .reg-bl { content: "+"; bottom: 12px; left: 12px; }
+  .reg-frame > .reg-br { content: "+"; bottom: 12px; right: 12px; }
+  .reg-frame > .reg-bl::before { content: "+"; }
+  .reg-frame > .reg-br::before { content: "+"; }
+
+  /* ============================================================
+     TYPOGRAPHY — two registers (monumental + clinical)
+     ============================================================ */
+  .display {
+    font-family: var(--font-display);
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    line-height: 0.86;
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  .mono {
+    font-family: var(--font-mono);
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-size: 12px;
+  }
+
+  .serif-italic {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-weight: 400;
+    color: var(--ink-soft);
+  }
+
+  .label {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink);
+  }
+  .label--coral { color: var(--coral); }
+
+  .accent { color: var(--coral); }
+
+  /* ============================================================
+     TOP BAR — slate of metadata, like a darkroom slip
+     ============================================================ */
+  .topbar {
+    position: relative;
+    border-bottom: 1px solid var(--rule-strong);
+    padding: 14px 0;
+    background: var(--paper);
+    z-index: 2;
+  }
+  .topbar__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+  }
+  .topbar .logo {
+    font-family: var(--font-display);
+    font-size: 20px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+  .topbar .logo .dot { color: var(--coral); }
+  .topbar nav { display: flex; gap: 28px; }
+  .topbar nav a {
+    text-decoration: none;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink);
+  }
+  .topbar nav a:hover { color: var(--coral); }
+  @media (max-width: 768px) {
+    .topbar nav { display: none; }
+  }
+
+  /* ============================================================
+     HERO
+     ============================================================ */
+  .hero { padding-top: 64px; padding-bottom: 64px; }
+  .hero__meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 36px;
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+  .hero__meta .left { display: flex; gap: 22px; flex-wrap: wrap; align-items: center; }
+  .hero__meta .right { display: flex; gap: 22px; align-items: center; }
+
+  .hero__headline {
+    font-size: clamp(64px, 14vw, 220px);
+    margin: 0 0 0 0;
+  }
+  .hero__headline .price {
+    color: var(--coral);
+  }
+  .hero__sub {
+    margin-top: 28px;
+    max-width: 720px;
+    font-size: clamp(17px, 1.5vw, 21px);
+    line-height: 1.45;
+    color: var(--ink-soft);
+  }
+  .hero__sub strong { font-weight: 600; }
+  .hero__cta-row {
+    margin-top: 40px;
+    display: flex;
+    gap: 22px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .hero__aside {
+    margin-top: 36px;
+    font-size: 17px;
+    max-width: 540px;
+  }
+  .hero__limits {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 64px;
+    border-top: 1px solid var(--rule-strong);
+    border-bottom: 1px solid var(--rule-strong);
+    padding: 22px 0;
+  }
+  .hero__limits .cell { display: flex; flex-direction: column; gap: 6px; }
+  .hero__limits .cell .num {
+    font-family: var(--font-display);
+    font-size: clamp(34px, 5vw, 54px);
+    line-height: 1;
+  }
+  .hero__limits .cell .lbl {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+  }
+  @media (max-width: 640px) {
+    .hero__limits { grid-template-columns: 1fr; gap: 14px; padding: 18px 0; }
+    .hero__limits .cell { border-bottom: 1px solid var(--rule); padding-bottom: 12px; }
+    .hero__limits .cell:last-child { border-bottom: 0; padding-bottom: 0; }
+  }
+
+  /* ============================================================
+     BUTTONS
+     ============================================================ */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    padding: 18px 28px;
+    border-radius: 0;
+    border: 1px solid var(--ink);
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 120ms ease, color 120ms ease, transform 120ms ease;
+  }
+  .btn--primary {
+    background: var(--ink);
+    color: var(--paper);
+  }
+  .btn--primary:hover {
+    background: var(--coral);
+    border-color: var(--coral);
+    color: var(--paper);
+  }
+  .btn--ghost {
+    background: transparent;
+    color: var(--ink);
+  }
+  .btn--ghost:hover {
+    background: var(--ink);
+    color: var(--paper);
+  }
+  .btn .arrow { font-family: var(--font-mono); }
+
+  /* ============================================================
+     PROOF BAR — three big credits, museum catalogue style
+     ============================================================ */
+  .proof {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 56px 0;
+  }
+  .proof .wrap { color: var(--paper); }
+  .proof__intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    border-bottom: 1px solid #ffffff22;
+    padding-bottom: 18px;
+    margin-bottom: 36px;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .proof__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 36px;
+  }
+  .proof__cell .head {
+    font-family: var(--font-display);
+    font-size: clamp(28px, 3.4vw, 44px);
+    line-height: 1;
+    margin: 0 0 12px 0;
+    color: var(--paper);
+  }
+  .proof__cell .head .accent { color: var(--coral); }
+  .proof__cell .body {
+    font-size: 14px;
+    line-height: 1.55;
+    color: #c8c4bc;
+    max-width: 36ch;
+  }
+  @media (max-width: 760px) {
+    .proof__grid { grid-template-columns: 1fr; gap: 28px; }
+  }
+
+  /* ============================================================
+     INCLUDED — the "what's in the box" list
+     ============================================================ */
+  .included__head {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+    align-items: end;
+    border-bottom: 1px solid var(--rule-strong);
+    padding-bottom: 24px;
+    margin-bottom: 40px;
+  }
+  .included__title {
+    font-size: clamp(40px, 6vw, 76px);
+    margin: 0;
+  }
+  .included__lede {
+    font-size: 17px;
+    line-height: 1.5;
+    max-width: 56ch;
+    color: var(--ink-soft);
+  }
+  .included__list {
+    list-style: none;
+    margin: 0; padding: 0;
+  }
+  .included__list li {
+    display: grid;
+    grid-template-columns: 60px 1fr 80px;
+    gap: 20px;
+    align-items: baseline;
+    padding: 22px 0;
+    border-bottom: 1px solid var(--rule-strong);
+  }
+  .included__list li:first-child { border-top: 1px solid var(--rule-strong); }
+  .included__list .idx {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    color: var(--coral);
+  }
+  .included__list .item {
+    font-family: var(--font-display);
+    font-size: clamp(22px, 2.6vw, 34px);
+    line-height: 1.05;
+    text-transform: uppercase;
+  }
+  .included__list .meta {
+    text-align: right;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+  }
+  @media (max-width: 640px) {
+    .included__head { grid-template-columns: 1fr; gap: 18px; }
+    .included__list li { grid-template-columns: 36px 1fr; }
+    .included__list .meta { display: none; }
+  }
+
+  /* ============================================================
+     PROCESS — 4-step horizontal flow
+     ============================================================ */
+  .process { background: var(--paper); }
+  .process__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 24px;
+    border-bottom: 1px solid var(--rule-strong);
+    padding-bottom: 22px;
+    margin-bottom: 56px;
+    flex-wrap: wrap;
+  }
+  .process__title { font-size: clamp(40px, 6vw, 76px); margin: 0; }
+  .process__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+  }
+  .step {
+    padding: 0 26px 0 0;
+    border-right: 1px solid var(--rule-strong);
+    position: relative;
+  }
+  .step:first-child { padding-left: 0; }
+  .step:last-child  { border-right: 0; }
+  .step:not(:first-child) { padding-left: 26px; }
+  .step__num {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    color: var(--coral);
+    margin-bottom: 18px;
+  }
+  .step__name {
+    font-family: var(--font-display);
+    font-size: clamp(28px, 3.6vw, 48px);
+    line-height: 0.95;
+    margin: 0 0 14px 0;
+    text-transform: uppercase;
+  }
+  .step__desc {
+    font-size: 14px;
+    line-height: 1.55;
+    color: var(--ink-soft);
+    max-width: 28ch;
+  }
+  @media (max-width: 880px) {
+    .process__grid { grid-template-columns: 1fr 1fr; }
+    .step { padding-bottom: 28px; border-bottom: 1px solid var(--rule-strong); }
+    .step:nth-child(2) { border-right: 0; }
+    .step:nth-child(3), .step:nth-child(4) { padding-top: 28px; padding-bottom: 0; border-bottom: 0; }
+    .step:nth-child(3) { padding-left: 0; }
+  }
+  @media (max-width: 540px) {
+    .process__grid { grid-template-columns: 1fr; }
+    .step { padding: 24px 0; border-right: 0; border-bottom: 1px solid var(--rule-strong); }
+    .step:not(:first-child) { padding-left: 0; }
+    .step:last-child { border-bottom: 0; }
+  }
+
+  /* ============================================================
+     SAMPLE WORK — proof sheet of 6 frames at 4:5
+     ============================================================ */
+  .samples { background: var(--paper); }
+  .samples__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    border-bottom: 1px solid var(--rule-strong);
+    padding-bottom: 22px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .samples__title { font-size: clamp(40px, 6vw, 76px); margin: 0; }
+  .samples__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+  .frame {
+    aspect-ratio: 4 / 5;
+    background: var(--slate);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--ink-mute);
+  }
+  .frame .frame__label {
+    position: absolute;
+    bottom: 10px;
+    left: 12px;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+  .frame .frame__num {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    color: var(--coral);
+  }
+  .frame .frame__center {
+    font-family: var(--font-display);
+    font-size: 42px;
+    color: #b8b3a8;
+    text-transform: uppercase;
+  }
+  @media (max-width: 760px) {
+    .samples__grid { grid-template-columns: 1fr 1fr; }
+  }
+
+  /* ============================================================
+     ABOUT — photographer's note
+     ============================================================ */
+  .about {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 96px 0;
+  }
+  .about .wrap { color: var(--paper); }
+  .about__grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 60px;
+  }
+  .about__title {
+    font-family: var(--font-display);
+    font-size: clamp(40px, 6vw, 84px);
+    line-height: 0.9;
+    margin: 0;
+    color: var(--paper);
+  }
+  .about__title .accent { color: var(--coral); }
+  .about__copy p {
+    font-size: 17px;
+    line-height: 1.65;
+    color: #d6d2c9;
+    margin: 0 0 22px 0;
+  }
+  .about__copy p strong { color: var(--paper); font-weight: 600; }
+  .about__copy .quote {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 22px;
+    line-height: 1.45;
+    color: var(--paper);
+    border-left: 2px solid var(--coral);
+    padding-left: 20px;
+    margin: 28px 0;
+  }
+  @media (max-width: 760px) {
+    .about__grid { grid-template-columns: 1fr; gap: 28px; }
+  }
+
+  /* ============================================================
+     FAQ — accordion-free, simply opened plates
+     ============================================================ */
+  .faq__head {
+    border-bottom: 1px solid var(--rule-strong);
+    padding-bottom: 22px;
+    margin-bottom: 30px;
+  }
+  .faq__title { font-size: clamp(40px, 6vw, 76px); margin: 0; }
+
+  details.qa {
+    border-bottom: 1px solid var(--rule-strong);
+    padding: 22px 0;
+  }
+  details.qa summary {
+    list-style: none;
+    cursor: pointer;
+    display: grid;
+    grid-template-columns: 50px 1fr 24px;
+    gap: 20px;
+    align-items: baseline;
+  }
+  details.qa summary::-webkit-details-marker { display: none; }
+  details.qa .qnum {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    color: var(--coral);
+  }
+  details.qa .qtext {
+    font-family: var(--font-display);
+    font-size: clamp(22px, 2.4vw, 30px);
+    line-height: 1.05;
+    text-transform: uppercase;
+  }
+  details.qa .qtoggle {
+    font-family: var(--font-mono);
+    font-size: 18px;
+    color: var(--ink);
+    text-align: right;
+  }
+  details.qa[open] .qtoggle::before { content: "−"; }
+  details.qa:not([open]) .qtoggle::before { content: "+"; }
+  details.qa .answer {
+    margin: 18px 0 0 70px;
+    font-size: 15.5px;
+    line-height: 1.65;
+    max-width: 70ch;
+    color: var(--ink-soft);
+  }
+  @media (max-width: 540px) {
+    details.qa summary { grid-template-columns: 36px 1fr 20px; gap: 12px; }
+    details.qa .answer { margin-left: 48px; }
+  }
+
+  /* ============================================================
+     FINAL CTA + CALENDAR EMBED
+     ============================================================ */
+  .finalcta {
+    background: var(--paper);
+    border-top: 1px solid var(--rule-strong);
+    padding: 96px 0;
+  }
+  .finalcta__title {
+    font-size: clamp(56px, 10vw, 132px);
+    margin: 0 0 28px 0;
+    line-height: 0.86;
+  }
+  .finalcta__title .accent { color: var(--coral); }
+  .finalcta__lede {
+    font-size: 18px;
+    line-height: 1.5;
+    color: var(--ink-soft);
+    max-width: 56ch;
+    margin-bottom: 36px;
+  }
+  .calendar-embed {
+    margin-top: 56px;
+    border: 1px solid var(--rule-strong);
+    background: #ffffff;
+    aspect-ratio: 16 / 9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--ink-mute);
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  /* ============================================================
+     FOOTER
+     ============================================================ */
+  footer.foot {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 72px 0 36px 0;
+  }
+  footer.foot .wrap { color: var(--paper); }
+  .foot__grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 40px;
+    border-bottom: 1px solid #ffffff22;
+    padding-bottom: 36px;
+    margin-bottom: 28px;
+  }
+  .foot__brand .mark {
+    font-family: var(--font-display);
+    font-size: 36px;
+    line-height: 0.95;
+    margin-bottom: 14px;
+  }
+  .foot__brand .mark .accent { color: var(--coral); }
+  .foot__brand .tag {
+    font-family: var(--font-serif);
+    font-style: italic;
+    color: #c8c4bc;
+    max-width: 36ch;
+    margin: 0;
+  }
+  .foot__col h4 {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--coral);
+    margin: 0 0 14px 0;
+  }
+  .foot__col a, .foot__col p {
+    color: #d6d2c9;
+    text-decoration: none;
+    font-size: 14px;
+    margin: 0 0 8px 0;
+    display: block;
+    line-height: 1.5;
+  }
+  .foot__col a:hover { color: var(--paper); }
+  .foot__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #8a857c;
+  }
+  .foot__bottom .marks { color: var(--coral); letter-spacing: 0.4em; }
+  @media (max-width: 880px) {
+    .foot__grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 540px) {
+    .foot__grid { grid-template-columns: 1fr; }
+  }
+
+  /* ============================================================
+     UTILITY
+     ============================================================ */
+  .sr-only {
+    position: absolute; width: 1px; height: 1px; padding: 0;
+    margin: -1px; overflow: hidden; clip: rect(0,0,0,0);
+    white-space: nowrap; border: 0;
+  }
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     TOP BAR
+     ============================================================ -->
+<header class="topbar">
+  <div class="wrap topbar__inner">
+    <div class="logo">100<span class="dot">·</span>HEADSHOTS</div>
+    <nav aria-label="Primary">
+      <a href="#included">What's Included</a>
+      <a href="#process">How It Works</a>
+      <a href="#samples">Work</a>
+      <a href="#faq">FAQ</a>
+      <a href="#book" class="accent">Book →</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section class="hero reg-frame" aria-labelledby="hero-headline">
+  <span class="reg-bl" aria-hidden="true"></span>
+  <span class="reg-br" aria-hidden="true"></span>
+  <div class="wrap">
+    <div class="hero__meta">
+      <div class="left">
+        <span class="mono">Vol. 01 · Limited Release</span>
+        <span class="mono label--coral">Orlando · FL</span>
+      </div>
+      <div class="right">
+        <span class="mono">Cap · 100 Spots</span>
+      </div>
+    </div>
+
+    <h1 id="hero-headline" class="display hero__headline">
+      <span class="price">$100</span><br />
+      Headshots<br />
+      <span style="color:var(--ink-soft);">Orlando.</span>
+    </h1>
+
+    <p class="hero__sub">
+      A <strong>15-minute studio session</strong> at Santoku Studios. One fully edited,
+      print-ready portrait — the photo your LinkedIn, your bio page, and your mother
+      have been quietly waiting for.
+    </p>
+
+    <div class="hero__cta-row">
+      <!-- GHL_BOOKING_LINK — replace with dedicated $100 calendar when built -->
+      <a class="btn btn--primary" href="https://api.leadconnectorhq.com/widget/booking/6PJmFlf8wO5cNephtWVJ" target="_blank" rel="noopener">
+        Book your slot <span class="arrow">→</span>
+      </a>
+      <a class="btn btn--ghost" href="#included">See what's included</a>
+    </div>
+
+    <p class="serif-italic hero__aside">
+      "A great headshot is not a flattering photograph — it is an honest one,
+      taken on a good day, by someone who was paying attention."
+    </p>
+
+    <div class="hero__limits" aria-label="Session highlights">
+      <div class="cell">
+        <span class="num">15<span class="accent">′</span></span>
+        <span class="lbl">Minute Session</span>
+      </div>
+      <div class="cell">
+        <span class="num">01</span>
+        <span class="lbl">Fully Edited Final</span>
+      </div>
+      <div class="cell">
+        <span class="num">3–5<span class="accent">d</span></span>
+        <span class="lbl">Turnaround</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PROOF BAR
+     ============================================================ -->
+<section class="proof" aria-labelledby="proof-title">
+  <div class="wrap">
+    <div class="proof__intro">
+      <h2 id="proof-title" class="display" style="font-size: clamp(28px, 3.4vw, 42px); color: var(--paper);">
+        Field Notes <span class="accent">/</span> Receipts
+      </h2>
+      <span class="mono" style="color: #c8c4bc;">Plate 02 · Provenance</span>
+    </div>
+
+    <div class="proof__grid">
+      <div class="proof__cell">
+        <h3 class="head">Album <span class="accent">Cover</span> Credits</h3>
+        <p class="body">
+          Photography for Alex Rose, Anuel AA, and Jerry Rivera. The same eye now
+          turned on a 15-minute portrait for you.
+        </p>
+      </div>
+      <div class="proof__cell">
+        <h3 class="head"><span class="accent">Santoku</span> Studios</h3>
+        <p class="body">
+          Sessions run from a clean professional studio in Orlando. Backdrop, lighting,
+          direction — all handled.
+        </p>
+      </div>
+      <div class="proof__cell">
+        <h3 class="head">15-Minute <span class="accent">Promise</span></h3>
+        <p class="body">
+          You arrive, we shoot, you leave. Your time is the budget. We move with the
+          economy of a working pro.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     WHAT'S INCLUDED
+     ============================================================ -->
+<section id="included" aria-labelledby="included-title">
+  <div class="wrap">
+    <div class="included__head">
+      <h2 id="included-title" class="display included__title">
+        What's<br /><span class="accent">Included.</span>
+      </h2>
+      <p class="included__lede">
+        One price. No upsells at the door. Everything below is part of the
+        <strong>$100 limited release</strong> — capped at 100 spots so the calendar
+        stays honest.
+      </p>
+    </div>
+
+    <ul class="included__list" role="list">
+      <li>
+        <span class="idx">01</span>
+        <span class="item">15-Minute Studio Session</span>
+        <span class="meta">Time</span>
+      </li>
+      <li>
+        <span class="idx">02</span>
+        <span class="item">One Fully Edited Print-Ready Image</span>
+        <span class="meta">Deliverable</span>
+      </li>
+      <li>
+        <span class="idx">03</span>
+        <span class="item">Clean Studio Backdrop · One Look</span>
+        <span class="meta">Set</span>
+      </li>
+      <li>
+        <span class="idx">04</span>
+        <span class="item">Professional Lighting + Live Direction</span>
+        <span class="meta">Craft</span>
+      </li>
+      <li>
+        <span class="idx">05</span>
+        <span class="item">Delivery in 3–5 Business Days</span>
+        <span class="meta">Turnaround</span>
+      </li>
+    </ul>
+
+    <p class="serif-italic" style="margin-top: 32px; max-width: 56ch;">
+      Want a second outfit, additional retouched images, or a full branding shoot?
+      Add-ons available — additional retouched photos start at $45 each.
+    </p>
+  </div>
+</section>
+
+<hr class="rule" />
+
+<!-- ============================================================
+     PROCESS
+     ============================================================ -->
+<section id="process" class="process" aria-labelledby="process-title">
+  <div class="wrap">
+    <div class="process__head">
+      <h2 id="process-title" class="display process__title">
+        How It<br /><span class="accent">Works.</span>
+      </h2>
+      <span class="mono">Plate 04 · Process</span>
+    </div>
+
+    <div class="process__grid">
+      <div class="step">
+        <div class="step__num">01 / Step</div>
+        <h3 class="step__name">Book.</h3>
+        <p class="step__desc">
+          Pick your slot on the calendar and pay the $100. Confirmation lands in your
+          inbox within minutes.
+        </p>
+      </div>
+      <div class="step">
+        <div class="step__num">02 / Step</div>
+        <h3 class="step__name">Prep.</h3>
+        <p class="step__desc">
+          We send a short style guide so you know what to wear and what to expect.
+          No guessing.
+        </p>
+      </div>
+      <div class="step">
+        <div class="step__num">03 / Step</div>
+        <h3 class="step__name">Shoot.</h3>
+        <p class="step__desc">
+          15 minutes at Santoku Studios in Orlando. Lighting, backdrop, and direction
+          handled by Gerson.
+        </p>
+      </div>
+      <div class="step">
+        <div class="step__num">04 / Step</div>
+        <h3 class="step__name">Deliver.</h3>
+        <p class="step__desc">
+          One fully edited, print-ready portrait sent to you within 3–5 business days.
+          Ready to upload everywhere.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SAMPLE WORK
+     ============================================================ -->
+<section id="samples" class="samples" aria-labelledby="samples-title">
+  <div class="wrap">
+    <div class="samples__head">
+      <h2 id="samples-title" class="display samples__title">
+        Selected<br />Frames<span class="accent">.</span>
+      </h2>
+      <span class="mono">Plate 05 · Proof Sheet</span>
+    </div>
+
+    <div class="samples__grid">
+      <!-- IMAGE_PLACEHOLDER_1 -->
+      <figure class="frame" aria-label="Sample portrait 1">
+        <span class="frame__num">01 / 06</span>
+        <span class="frame__center">GLPX</span>
+        <figcaption class="frame__label">Headshot · Orlando</figcaption>
+      </figure>
+      <!-- IMAGE_PLACEHOLDER_2 -->
+      <figure class="frame" aria-label="Sample portrait 2">
+        <span class="frame__num">02 / 06</span>
+        <span class="frame__center">GLPX</span>
+        <figcaption class="frame__label">Headshot · Orlando</figcaption>
+      </figure>
+      <!-- IMAGE_PLACEHOLDER_3 -->
+      <figure class="frame" aria-label="Sample portrait 3">
+        <span class="frame__num">03 / 06</span>
+        <span class="frame__center">GLPX</span>
+        <figcaption class="frame__label">Headshot · Orlando</figcaption>
+      </figure>
+      <!-- IMAGE_PLACEHOLDER_4 -->
+      <figure class="frame" aria-label="Sample portrait 4">
+        <span class="frame__num">04 / 06</span>
+        <span class="frame__center">GLPX</span>
+        <figcaption class="frame__label">Headshot · Orlando</figcaption>
+      </figure>
+      <!-- IMAGE_PLACEHOLDER_5 -->
+      <figure class="frame" aria-label="Sample portrait 5">
+        <span class="frame__num">05 / 06</span>
+        <span class="frame__center">GLPX</span>
+        <figcaption class="frame__label">Headshot · Orlando</figcaption>
+      </figure>
+      <!-- IMAGE_PLACEHOLDER_6 -->
+      <figure class="frame" aria-label="Sample portrait 6">
+        <span class="frame__num">06 / 06</span>
+        <span class="frame__center">GLPX</span>
+        <figcaption class="frame__label">Headshot · Orlando</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     ABOUT
+     ============================================================ -->
+<section class="about" aria-labelledby="about-title">
+  <div class="wrap">
+    <div class="about__grid">
+      <h2 id="about-title" class="about__title">
+        About the<br /><span class="accent">Photographer.</span>
+      </h2>
+      <div class="about__copy">
+        <p>
+          I'm <strong>Gerson Lopez</strong>, founder of <strong>GLPX Studio</strong>.
+          Most of my career has been spent making people who are used to being looked at
+          — recording artists, founders, athletes — actually feel seen on camera.
+          Album covers for <strong>Alex Rose</strong>, <strong>Anuel AA</strong>, and
+          <strong>Jerry Rivera</strong> came out of that work.
+        </p>
+        <p>
+          The <strong>$100 Headshots</strong> release exists for a simple reason: most
+          professionals in Orlando are using a phone selfie or a 2018 LinkedIn photo,
+          and they deserve better. So once a quarter I open up 100 spots, run them out
+          of <strong>Santoku Studios</strong>, and let the same eye that shot the
+          covers handle a 15-minute portrait for you.
+        </p>
+        <p class="quote">
+          You don't need a four-hour branding shoot to look like a serious person.
+          You need fifteen good minutes, decent light, and someone who knows where to
+          put your hands.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FAQ
+     ============================================================ -->
+<section id="faq" aria-labelledby="faq-title">
+  <div class="wrap">
+    <div class="faq__head">
+      <h2 id="faq-title" class="display faq__title">
+        FAQ<span class="accent">.</span>
+      </h2>
+    </div>
+
+    <details class="qa">
+      <summary>
+        <span class="qnum">Q · 01</span>
+        <span class="qtext">What if I'm not photogenic?</span>
+        <span class="qtoggle" aria-hidden="true"></span>
+      </summary>
+      <p class="answer">
+        Almost no one thinks they are. The job of a portrait photographer is to know
+        which side of your face you like, where the light should be, and what to say
+        between frames so you stop holding your breath. That's what the 15 minutes are
+        for. You don't need to be photogenic — you just need to show up.
+      </p>
+    </details>
+
+    <details class="qa">
+      <summary>
+        <span class="qnum">Q · 02</span>
+        <span class="qtext">What should I wear?</span>
+        <span class="qtoggle" aria-hidden="true"></span>
+      </summary>
+      <p class="answer">
+        Solid colors over patterns. Something that fits well at the shoulders. A
+        jacket or layer adds structure for business-style headshots. Once you book,
+        you'll get a short style guide with examples — and a "what not to wear" note.
+      </p>
+    </details>
+
+    <details class="qa">
+      <summary>
+        <span class="qnum">Q · 03</span>
+        <span class="qtext">How long until I get the photos?</span>
+        <span class="qtoggle" aria-hidden="true"></span>
+      </summary>
+      <p class="answer">
+        3–5 business days. You'll receive your one fully edited, print-ready portrait
+        as a high-resolution download — ready for LinkedIn, your website, your bio
+        page, and any print collateral.
+      </p>
+    </details>
+
+    <details class="qa">
+      <summary>
+        <span class="qnum">Q · 04</span>
+        <span class="qtext">Where is the studio?</span>
+        <span class="qtoggle" aria-hidden="true"></span>
+      </summary>
+      <p class="answer">
+        Sessions are at <strong>Santoku Studios</strong> in Orlando, FL. You'll get
+        the full address, parking notes, and a map link in your booking confirmation.
+      </p>
+    </details>
+
+    <details class="qa">
+      <summary>
+        <span class="qnum">Q · 05</span>
+        <span class="qtext">Can I add extra edited images?</span>
+        <span class="qtoggle" aria-hidden="true"></span>
+      </summary>
+      <p class="answer">
+        Yes. Additional retouched, print-ready images are <strong>$45 each</strong>.
+        You can pick favorites from your session after the shoot. If you want a
+        broader branding setup — multiple outfits, more frames, more time — see the
+        full price guide at <a href="https://glpxstudio.com" style="color:var(--coral); text-decoration: underline;">glpxstudio.com</a>.
+      </p>
+    </details>
+  </div>
+</section>
+
+<!-- ============================================================
+     FINAL CTA + CALENDAR
+     ============================================================ -->
+<section id="book" class="finalcta reg-frame" aria-labelledby="book-title">
+  <span class="reg-bl" aria-hidden="true"></span>
+  <span class="reg-br" aria-hidden="true"></span>
+  <div class="wrap">
+    <div class="mono" style="margin-bottom: 22px;">Plate 07 · Reservation</div>
+    <h2 id="book-title" class="display finalcta__title">
+      Book your<br /><span class="accent">$100 slot.</span>
+    </h2>
+    <p class="finalcta__lede">
+      Capped at 100 spots. When the calendar fills, the release closes. Pick a time
+      that works, pay the $100, and we'll see you at Santoku.
+    </p>
+    <div class="hero__cta-row">
+      <!-- GHL_BOOKING_LINK — replace with dedicated $100 calendar when built -->
+      <a class="btn btn--primary" href="https://api.leadconnectorhq.com/widget/booking/6PJmFlf8wO5cNephtWVJ" target="_blank" rel="noopener">
+        Reserve a slot <span class="arrow">→</span>
+      </a>
+      <a class="btn btn--ghost" href="mailto:glpxstudio@gmail.com?subject=100%20Headshots%20Question">
+        Ask a question
+      </a>
+    </div>
+
+    <!-- GHL_BOOKING_LINK — embed iframe here once a dedicated $100 calendar is built -->
+    <div class="calendar-embed" aria-label="Booking calendar embed slot">
+      [ Booking Calendar Embed · drop GHL iframe here ]
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="foot" aria-labelledby="foot-title">
+  <h2 id="foot-title" class="sr-only">Contact &amp; Studio</h2>
+  <div class="wrap">
+    <div class="foot__grid">
+      <div class="foot__brand">
+        <div class="mark">100<span class="accent">·</span>HEADSHOTS</div>
+        <p class="tag">
+          A limited release by GLPX Studio. Studio sessions in Orlando, run with the
+          discipline of a working photographer's logbook.
+        </p>
+      </div>
+      <div class="foot__col">
+        <h4>Contact</h4>
+        <a href="mailto:glpxstudio@gmail.com">glpxstudio@gmail.com</a>
+        <a href="tel:+14075347581">407.534.7581</a>
+        <p>Orlando, FL</p>
+      </div>
+      <div class="foot__col">
+        <h4>Follow</h4>
+        <a href="https://instagram.com/glpxstudio" target="_blank" rel="noopener">@glpxstudio</a>
+        <a href="https://glpxstudio.com" target="_blank" rel="noopener">glpxstudio.com</a>
+      </div>
+      <div class="foot__col">
+        <h4>Studio</h4>
+        <p>Santoku Studios</p>
+        <p>Orlando · FL</p>
+      </div>
+    </div>
+    <div class="foot__bottom">
+      <span>© 2026 GLPX Studio · 100headshots.com</span>
+      <span class="marks" aria-hidden="true">+&nbsp;&nbsp;+&nbsp;&nbsp;+&nbsp;&nbsp;+</span>
+      <span>Photography by Gerson Lopez</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
