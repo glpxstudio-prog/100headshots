@@ -9,9 +9,10 @@
   body {
     font-family: 'Inter', sans-serif;
     color: #111111;
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    padding: 56px 56px 64px;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    padding: 80px 56px 80px;
     position: relative;
   }
   .corner-tl, .corner-tr, .corner-bl, .corner-br {
@@ -30,27 +31,27 @@
 
   .hook {
     font-family: 'Anton', sans-serif;
-    font-size: 144px;
-    line-height: 0.92;
+    font-size: 108px;
+    line-height: 0.93;
     letter-spacing: -0.02em;
     text-transform: uppercase;
     color: #111111;
-    margin-top: 24px;
   }
   .hook .accent { color: #E76F51; }
 
   .portrait-frame {
-    margin: 32px 0;
-    aspect-ratio: 1 / 1;
+    width: 100%;
+    height: 320px;
     overflow: hidden;
     position: relative;
     border: 2px solid #111111;
+    flex-shrink: 0;
   }
   .portrait-frame img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center top;
+    object-position: center 22%;
   }
   .portrait-tag {
     position: absolute;
