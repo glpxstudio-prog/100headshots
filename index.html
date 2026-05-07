@@ -958,21 +958,39 @@
     .footer-grid { grid-template-columns: 1fr; }
     .topbar-inner { font-size: 9.5px; gap: 10px; }
     .topbar .tb-dim { display: none; }
-    .hero-h1 { font-size: 56px; line-height: 0.92; }
+
+    /* Centered mobile layout */
+    .hero-grid > div { text-align: center; }
+    .hero-stamp { justify-content: center; }
+    .hero-h1 { font-size: 56px; line-height: 0.92; text-align: center; }
     .hero-h1 .num { font-size: 1.05em; }
     .hero-corner-mark { font-size: 9.5px; }
-    .hero-aside { font-size: 16px; }
+    .hero-aside { font-size: 16px; text-align: center; margin-left: auto; margin-right: auto; }
+    .hero-rule { margin-left: auto; margin-right: auto; }
     .hero { padding: 24px 0 32px; }
+    .exif { margin-left: auto; margin-right: auto; justify-content: center; text-align: left; max-width: 280px; }
+    .counter { padding: 16px 0; text-align: center; align-items: center; justify-content: center; }
+    .counter .big { font-size: 56px; }
+    .cta-row { display: flex; flex-direction: column; gap: 12px; align-items: center; }
+    .cta-row .btn-primary, .cta-row .btn-secondary { width: 100%; text-align: center; justify-content: center; padding: 18px 20px; font-size: 14px; }
+
     section { padding: 48px 0; }
-    .section-h2 { font-size: 38px; line-height: 1.0; }
+    .section-h2 { font-size: 38px; line-height: 1.0; text-align: center; }
+    .section-sub { text-align: center; margin-left: auto; margin-right: auto; }
+    .frame-label { justify-content: center; display: flex; }
+    .audience-card, .offer-card, .step { text-align: center; }
+    .audience-card .frame-tag, .offer-card .frame-tag { justify-content: center; }
+    .about-grid { text-align: center; }
+    .about-portrait { margin-left: auto; margin-right: auto; }
+    .signature { text-align: center; }
+    .pull { margin-left: auto; margin-right: auto; }
+
     .price-table th:nth-child(2), .price-table td:nth-child(2) { display: none; }
     .price-table th, .price-table td { padding: 14px 12px; }
-    .cta-row { display: flex; flex-direction: column; gap: 12px; }
-    .cta-row .btn-primary, .cta-row .btn-secondary { width: 100%; text-align: center; justify-content: center; padding: 18px 20px; font-size: 14px; }
-    .counter { padding: 16px 0; }
-    .counter .big { font-size: 56px; }
+
     .booking-frame { min-height: 720px; }
-    .logo-img { height: 48px; }
+    .logo-img { height: 48px; margin-left: auto; margin-right: auto; }
+    header.hero .container > a:first-child { display: flex; justify-content: center; }
   }
 </style>
 </head>
