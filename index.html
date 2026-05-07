@@ -514,6 +514,23 @@ fbq('track', 'PageView');
     justify-content: center;
     color: var(--ink-mute);
   }
+  .frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    filter: grayscale(0%);
+    transition: transform 600ms ease;
+  }
+  .frame:hover img { transform: scale(1.03); }
+  .frame .frame__label,
+  .frame .frame__num {
+    z-index: 2;
+    background: rgba(240, 237, 232, 0.85);
+    padding: 3px 8px;
+    backdrop-filter: blur(2px);
+  }
   .frame .frame__label {
     position: absolute;
     bottom: 10px;
@@ -556,6 +573,32 @@ fbq('track', 'PageView');
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 60px;
+  }
+  .about__portrait {
+    margin: 0;
+    position: relative;
+  }
+  .about__portrait img {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    filter: grayscale(20%) contrast(1.05);
+  }
+  .about__portrait .tag {
+    margin-top: 12px;
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--coral);
+  }
+  .about__title-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
   }
   .about__title {
     font-family: var(--font-display);
@@ -666,15 +709,28 @@ fbq('track', 'PageView');
     margin-top: 56px;
     border: 1px solid var(--rule-strong);
     background: #ffffff;
-    aspect-ratio: 16 / 9;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--ink-mute);
+    overflow: hidden;
+    min-height: 720px;
+    position: relative;
+  }
+  .calendar-embed iframe {
+    width: 100%;
+    min-height: 720px;
+    border: 0;
+    display: block;
+  }
+  .calendar-embed__label {
+    position: absolute;
+    top: 14px;
+    left: 16px;
     font-family: var(--font-mono);
-    font-size: 12px;
-    letter-spacing: 0.12em;
+    font-size: 10px;
+    letter-spacing: 0.14em;
     text-transform: uppercase;
+    color: var(--coral);
+    background: var(--paper);
+    padding: 4px 10px;
+    z-index: 5;
   }
 
   /* ============================================================
@@ -985,40 +1041,34 @@ fbq('track', 'PageView');
     </div>
 
     <div class="samples__grid">
-      <!-- IMAGE_PLACEHOLDER_1 -->
-      <figure class="frame" aria-label="Sample portrait 1">
+      <figure class="frame" aria-label="Business headshot — Orlando">
+        <img src="img/sample-1.jpg" alt="Professional business headshot of an attorney in a suit, photographed in Orlando" loading="lazy" />
         <span class="frame__num">01 / 06</span>
-        <span class="frame__center">GLPX</span>
         <figcaption class="frame__label">Headshot · Orlando</figcaption>
       </figure>
-      <!-- IMAGE_PLACEHOLDER_2 -->
-      <figure class="frame" aria-label="Sample portrait 2">
+      <figure class="frame" aria-label="Business headshot — Orlando">
+        <img src="img/sample-2.jpg" alt="Professional business headshot, executive portrait" loading="lazy" />
         <span class="frame__num">02 / 06</span>
-        <span class="frame__center">GLPX</span>
         <figcaption class="frame__label">Headshot · Orlando</figcaption>
       </figure>
-      <!-- IMAGE_PLACEHOLDER_3 -->
-      <figure class="frame" aria-label="Sample portrait 3">
+      <figure class="frame" aria-label="Business headshot — Orlando">
+        <img src="img/sample-3.jpg" alt="Professional headshot for a law firm, suited subject, clean studio backdrop" loading="lazy" />
         <span class="frame__num">03 / 06</span>
-        <span class="frame__center">GLPX</span>
         <figcaption class="frame__label">Headshot · Orlando</figcaption>
       </figure>
-      <!-- IMAGE_PLACEHOLDER_4 -->
-      <figure class="frame" aria-label="Sample portrait 4">
+      <figure class="frame" aria-label="Business headshot — Orlando">
+        <img src="img/sample-4.jpg" alt="Corporate headshot, professional posed for LinkedIn-quality portrait" loading="lazy" />
         <span class="frame__num">04 / 06</span>
-        <span class="frame__center">GLPX</span>
         <figcaption class="frame__label">Headshot · Orlando</figcaption>
       </figure>
-      <!-- IMAGE_PLACEHOLDER_5 -->
-      <figure class="frame" aria-label="Sample portrait 5">
+      <figure class="frame" aria-label="Business headshot — Orlando">
+        <img src="img/sample-5.jpg" alt="Professional headshot, business portrait with clean lighting" loading="lazy" />
         <span class="frame__num">05 / 06</span>
-        <span class="frame__center">GLPX</span>
         <figcaption class="frame__label">Headshot · Orlando</figcaption>
       </figure>
-      <!-- IMAGE_PLACEHOLDER_6 -->
-      <figure class="frame" aria-label="Sample portrait 6">
+      <figure class="frame" aria-label="Business headshot — Orlando">
+        <img src="img/sample-6.jpg" alt="Executive headshot, sharply lit professional portrait" loading="lazy" />
         <span class="frame__num">06 / 06</span>
-        <span class="frame__center">GLPX</span>
         <figcaption class="frame__label">Headshot · Orlando</figcaption>
       </figure>
     </div>
@@ -1031,9 +1081,15 @@ fbq('track', 'PageView');
 <section class="about" aria-labelledby="about-title">
   <div class="wrap">
     <div class="about__grid">
-      <h2 id="about-title" class="about__title">
-        About the<br /><span class="accent">Photographer.</span>
-      </h2>
+      <div class="about__title-wrap">
+        <h2 id="about-title" class="about__title">
+          About the<br /><span class="accent">Photographer.</span>
+        </h2>
+        <figure class="about__portrait">
+          <img src="img/gerson.jpg" alt="Gerson Lopez, founder of GLPX Studio, holding a camera" loading="lazy" />
+          <span class="tag">Gerson Lopez · GLPX Studio · Orlando FL</span>
+        </figure>
+      </div>
       <div class="about__copy">
         <p>
           I'm <strong>Gerson Lopez</strong>, founder of <strong>GLPX Studio</strong>.
@@ -1163,12 +1219,21 @@ fbq('track', 'PageView');
       </a>
     </div>
 
-    <!-- GHL_BOOKING_LINK — embed iframe here once a dedicated $100 calendar is built -->
-    <div class="calendar-embed" aria-label="Booking calendar embed slot">
-      [ Booking Calendar Embed · drop GHL iframe here ]
+    <!-- GHL_BOOKING_LINK — calendar iframe (swap URL when a dedicated $100 calendar is built) -->
+    <div class="calendar-embed" aria-label="Booking calendar">
+      <span class="calendar-embed__label">Live Calendar</span>
+      <iframe
+        src="https://api.leadconnectorhq.com/widget/booking/6PJmFlf8wO5cNephtWVJ"
+        scrolling="no"
+        id="6PJmFlf8wO5cNephtWVJ_calendar"
+        title="Book your $100 headshot session"
+        loading="lazy">
+      </iframe>
     </div>
   </div>
 </section>
+
+<script src="https://link.msgsndr.com/js/form_embed.js" type="text/javascript" defer></script>
 
 <!-- ============================================================
      FOOTER
