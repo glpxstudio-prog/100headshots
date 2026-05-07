@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=JetBrains+Mono:wght@500;600&family=Inter:wght@500;700&display=swap" rel="stylesheet" />
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1080px; height: 1350px; overflow: hidden; background: #F0EDE8; }
+  body {
+    font-family: 'Inter', sans-serif;
+    color: #111111;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    padding: 56px 56px 64px;
+    position: relative;
+  }
+  .corner-tl, .corner-tr, .corner-bl, .corner-br {
+    position: absolute;
+    color: #E76F51;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  .corner-tl { top: 32px; left: 56px; }
+  .corner-tr { top: 32px; right: 56px; }
+  .corner-bl { bottom: 32px; left: 56px; color: rgba(17,17,17,0.5); }
+  .corner-br { bottom: 32px; right: 56px; color: rgba(17,17,17,0.5); }
+
+  .hook {
+    font-family: 'Anton', sans-serif;
+    font-size: 144px;
+    line-height: 0.92;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: #111111;
+    margin-top: 24px;
+  }
+  .hook .accent { color: #E76F51; }
+
+  .portrait-frame {
+    margin: 32px 0;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    position: relative;
+    border: 2px solid #111111;
+  }
+  .portrait-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+  }
+  .portrait-tag {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: rgba(0,0,0,0.85);
+    color: #F0EDE8;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    padding: 8px 12px;
+    text-transform: uppercase;
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  .calendar-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+  }
+  .day-cell {
+    background: #111111;
+    color: #F0EDE8;
+    padding: 18px 12px;
+    text-align: center;
+    border: 2px solid #111111;
+  }
+  .day-cell .num {
+    font-family: 'Anton', sans-serif;
+    font-size: 64px;
+    line-height: 1;
+    color: #F0EDE8;
+  }
+  .day-cell .label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-top: 6px;
+    color: rgba(240,237,232,0.7);
+  }
+  .specs {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #111111;
+  }
+  .specs .dim { color: rgba(17,17,17,0.55); font-weight: 500; }
+  .cta-pill {
+    background: #E76F51;
+    color: #F0EDE8;
+    font-family: 'Anton', sans-serif;
+    font-size: 36px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 22px 32px;
+    text-align: center;
+    border: 2px solid #111111;
+  }
+</style>
+</head>
+<body>
+  <span class="corner-tl">● Limited Release</span>
+  <span class="corner-tr">Vol. 01 · Orlando</span>
+
+  <div>
+    <div class="hook">Only 4<br />session<br />days left<br /><span class="accent">in June.</span></div>
+  </div>
+
+  <div class="portrait-frame">
+    <img src="../100-headshots-assets/gallery-01.jpg" alt="Orlando headshot" />
+    <span class="portrait-tag">Orlando · 2026</span>
+  </div>
+
+  <div class="footer">
+    <div class="calendar-row">
+      <div class="day-cell"><div class="num">04</div><div class="label">Thu Jun</div></div>
+      <div class="day-cell"><div class="num">11</div><div class="label">Thu Jun</div></div>
+      <div class="day-cell"><div class="num">18</div><div class="label">Thu Jun</div></div>
+      <div class="day-cell"><div class="num">25</div><div class="label">Thu Jun</div></div>
+    </div>
+    <div class="specs">$100 <span class="dim">·</span> 15&nbsp;min <span class="dim">·</span> 1 retouched final</div>
+    <div class="cta-pill">Claim before they fill →</div>
+  </div>
+
+  <span class="corner-bl">100headshots.com</span>
+  <span class="corner-br">GLPX Studio</span>
+</body>
+</html>
