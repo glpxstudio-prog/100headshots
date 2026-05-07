@@ -705,32 +705,105 @@ fbq('track', 'PageView');
     max-width: 56ch;
     margin-bottom: 36px;
   }
-  .calendar-embed {
-    margin-top: 56px;
-    border: 1px solid var(--rule-strong);
-    background: #ffffff;
-    overflow: hidden;
-    min-height: 720px;
-    position: relative;
-  }
-  .calendar-embed iframe {
-    width: 100%;
-    min-height: 720px;
-    border: 0;
+  /* ============================================================
+     CALENDAR CTA — replaces broken iframe with a click-through card
+     ============================================================ */
+  .calendar-cta {
     display: block;
+    margin-top: 56px;
+    padding: 56px 48px;
+    border: 1px solid var(--rule-strong);
+    background: var(--paper);
+    color: var(--ink);
+    text-decoration: none;
+    position: relative;
+    transition: background 200ms ease, transform 200ms ease;
   }
-  .calendar-embed__label {
+  .calendar-cta:hover {
+    background: var(--ink);
+    color: var(--paper);
+  }
+  .calendar-cta:hover .calendar-cta__label,
+  .calendar-cta:hover .calendar-cta__sub,
+  .calendar-cta:hover .calendar-cta__arrow,
+  .calendar-cta:hover .calendar-cta__row .lbl {
+    color: var(--coral);
+  }
+  .calendar-cta::before, .calendar-cta::after {
+    content: "+";
     position: absolute;
-    top: 14px;
-    left: 16px;
+    width: 16px; height: 16px;
+    color: var(--coral);
+    font-family: var(--font-mono);
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1;
+    text-align: center;
+    pointer-events: none;
+  }
+  .calendar-cta::before { top: 12px; left: 12px; }
+  .calendar-cta::after  { top: 12px; right: 12px; }
+  .calendar-cta__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--rule-strong);
+    padding-bottom: 18px;
+    margin-bottom: 28px;
+  }
+  .calendar-cta:hover .calendar-cta__top { border-bottom-color: #ffffff33; }
+  .calendar-cta__label {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--coral);
+  }
+  .calendar-cta__arrow {
+    font-family: var(--font-mono);
+    font-size: 22px;
+    color: var(--coral);
+    transition: transform 200ms ease;
+  }
+  .calendar-cta:hover .calendar-cta__arrow { transform: translate(4px, -4px); }
+  .calendar-cta__title {
+    font-family: var(--font-display);
+    font-size: clamp(36px, 5.4vw, 64px);
+    line-height: 0.95;
+    text-transform: uppercase;
+    margin: 0 0 18px 0;
+  }
+  .calendar-cta__sub {
+    font-size: 16px;
+    line-height: 1.55;
+    color: var(--ink-soft);
+    max-width: 56ch;
+    margin: 0 0 36px 0;
+  }
+  .calendar-cta__row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    border-top: 1px solid var(--rule-strong);
+    padding-top: 24px;
+  }
+  .calendar-cta:hover .calendar-cta__row { border-top-color: #ffffff33; }
+  .calendar-cta__row .cell { display: flex; flex-direction: column; gap: 4px; }
+  .calendar-cta__row .num {
+    font-family: var(--font-display);
+    font-size: clamp(28px, 4vw, 42px);
+    line-height: 1;
+  }
+  .calendar-cta__row .lbl {
     font-family: var(--font-mono);
     font-size: 10px;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: var(--coral);
-    background: var(--paper);
-    padding: 4px 10px;
-    z-index: 5;
+    color: var(--ink-mute);
+  }
+  @media (max-width: 640px) {
+    .calendar-cta { padding: 40px 28px; }
+    .calendar-cta__row { grid-template-columns: 1fr; gap: 18px; }
   }
 
   /* ============================================================
@@ -1219,21 +1292,39 @@ fbq('track', 'PageView');
       </a>
     </div>
 
-    <!-- GHL_BOOKING_LINK — calendar iframe (swap URL when a dedicated $100 calendar is built) -->
-    <div class="calendar-embed" aria-label="Booking calendar">
-      <span class="calendar-embed__label">Live Calendar</span>
-      <iframe
-        src="https://api.leadconnectorhq.com/widget/booking/6PJmFlf8wO5cNephtWVJ"
-        scrolling="no"
-        id="6PJmFlf8wO5cNephtWVJ_calendar"
-        title="Book your $100 headshot session"
-        loading="lazy">
-      </iframe>
-    </div>
+    <!-- GHL_BOOKING_LINK — clickable CTA card (GHL widget blocks iframe embedding cross-origin) -->
+    <a class="calendar-cta"
+       href="https://api.leadconnectorhq.com/widget/booking/6PJmFlf8wO5cNephtWVJ"
+       target="_blank" rel="noopener"
+       aria-label="Open the booking calendar in a new window">
+      <div class="calendar-cta__top">
+        <span class="calendar-cta__label">Live Calendar · Real-Time Availability</span>
+        <span class="calendar-cta__arrow" aria-hidden="true">↗</span>
+      </div>
+      <div class="calendar-cta__title">
+        Pick your<br /><span class="accent">15-minute slot.</span>
+      </div>
+      <p class="calendar-cta__sub">
+        Click anywhere in this card. The calendar opens in a new window — pick a
+        time that works, pay the $100, lock the date.
+      </p>
+      <div class="calendar-cta__row">
+        <div class="cell">
+          <span class="num">$100</span>
+          <span class="lbl">Flat Rate</span>
+        </div>
+        <div class="cell">
+          <span class="num">15<span class="accent">′</span></span>
+          <span class="lbl">Minute Session</span>
+        </div>
+        <div class="cell">
+          <span class="num">100</span>
+          <span class="lbl">Spots · Capped</span>
+        </div>
+      </div>
+    </a>
   </div>
 </section>
-
-<script src="https://link.msgsndr.com/js/form_embed.js" type="text/javascript" defer></script>
 
 <!-- ============================================================
      FOOTER
