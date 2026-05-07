@@ -19,23 +19,22 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=JetBrains+Mono:wght@400;500;600&family=Lora:ital,wght@1,400;1,500&display=swap" rel="stylesheet" />
 
-<!-- ============================================================
-     META PIXEL — drop your pixel ID into the placeholder below
-     ============================================================
-<!-- META_PIXEL_ID -->
-<!-- Example:
+<!-- Meta Pixel Code — GLPX STUDIO (1140403037921588) -->
 <script>
-!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-document,'script','https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', 'YOUR_PIXEL_ID_HERE');
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1140403037921588');
 fbq('track', 'PageView');
 </script>
 <noscript><img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID_HERE&ev=PageView&noscript=1" /></noscript>
--->
+  src="https://www.facebook.com/tr?id=1140403037921588&ev=PageView&noscript=1" /></noscript>
+<!-- End Meta Pixel Code -->
 
 <style>
   /* ============================================================
@@ -563,8 +562,8 @@ fbq('track', 'PageView');
     .samples__grid { grid-template-columns: 1fr 1fr; gap: 12px; }
   }
   @media (max-width: 600px) {
-    /* Mobile: single column, full-width images, hide overlay labels for clean visuals */
-    .samples__grid { grid-template-columns: 1fr; gap: 16px; }
+    /* Mobile: 2-column gallery for shorter scroll, hide overlay labels */
+    .samples__grid { grid-template-columns: 1fr 1fr; gap: 8px; }
     .frame .frame__label,
     .frame .frame__num {
       display: none;
@@ -940,120 +939,137 @@ fbq('track', 'PageView');
      MOBILE CENTERING — center everything on small screens
      ============================================================ */
   @media (max-width: 760px) {
-    :root { --gutter: 20px; }
-    section { padding: 40px 0; }
+    :root { --gutter: 18px; }
+    section { padding: 28px 0; }
 
     /* Top bar: center the logo, hide desktop nav */
     .topbar__inner { justify-content: center; }
     .topbar nav { display: none; }
 
     /* Hero: stack and center, tighter on mobile */
-    .hero { padding-top: 24px; padding-bottom: 32px; text-align: center; }
-    .hero__meta { flex-direction: column; align-items: center; gap: 8px; margin-bottom: 20px; }
+    .hero { padding-top: 16px; padding-bottom: 24px; text-align: center; }
+    .hero__meta { flex-direction: column; align-items: center; gap: 6px; margin-bottom: 14px; }
     .hero__meta .left,
-    .hero__meta .right { justify-content: center; gap: 10px; }
-    .hero__headline { font-size: clamp(48px, 16vw, 96px); line-height: 0.95; text-align: center; }
+    .hero__meta .right { justify-content: center; gap: 8px; }
+    .hero__headline { font-size: clamp(40px, 13vw, 72px); line-height: 0.95; text-align: center; }
     .hero__headline br { display: inline; }
-    .hero__sub { margin-top: 18px; margin-left: auto; margin-right: auto; text-align: center; font-size: 15px; }
-    .hero__cta-row { justify-content: center; margin-top: 24px; }
+    .hero__sub { margin-top: 12px; margin-left: auto; margin-right: auto; text-align: center; font-size: 14px; }
+    .hero__cta-row { justify-content: center; margin-top: 18px; gap: 10px; }
+    .hero__cta-row .btn { padding: 14px 20px; font-size: 11px; }
     .hero__aside { display: none; } /* hide italic quote on mobile to shorten */
-    .hero__limits { margin-top: 28px; padding: 16px 0; }
-    .hero__limits .cell { align-items: center; text-align: center; padding-bottom: 10px; }
+    .hero__limits {
+      margin-top: 20px; padding: 12px 0;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 8px;
+    }
+    .hero__limits .cell {
+      align-items: center; text-align: center;
+      padding-bottom: 0; border-bottom: 0;
+    }
+    .hero__limits .cell .num { font-size: 24px; }
+    .hero__limits .cell .lbl { font-size: 9px; }
 
     /* Proof bar — tighter */
-    .proof { padding: 36px 0; }
-    .proof__intro { flex-direction: column; align-items: center; text-align: center; gap: 6px; padding-bottom: 14px; margin-bottom: 22px; }
-    .proof__grid { gap: 22px; }
+    .proof { padding: 28px 0; }
+    .proof__intro { flex-direction: column; align-items: center; text-align: center; gap: 4px; padding-bottom: 10px; margin-bottom: 16px; }
+    .proof__grid { gap: 14px; }
     .proof__cell { text-align: center; }
-    .proof__cell .head { font-size: 28px; margin-bottom: 8px; }
-    .proof__cell .body { margin-left: auto; margin-right: auto; font-size: 13px; }
+    .proof__cell .head { font-size: 22px; margin-bottom: 4px; }
+    .proof__cell .body { margin-left: auto; margin-right: auto; font-size: 12px; line-height: 1.45; }
 
     /* Included — tighter */
-    .included__head { text-align: center; padding-bottom: 18px; margin-bottom: 24px; }
-    .included__title { text-align: center; font-size: 40px; }
-    .included__lede { margin-left: auto; margin-right: auto; text-align: center; font-size: 15px; }
+    .included__head { text-align: center; padding-bottom: 12px; margin-bottom: 16px; }
+    .included__title { text-align: center; font-size: 36px; }
+    .included__lede { margin-left: auto; margin-right: auto; text-align: center; font-size: 13px; }
     .included__list li {
       grid-template-columns: 1fr;
-      gap: 4px;
+      gap: 2px;
       justify-items: center;
       text-align: center;
-      padding: 14px 0;
+      padding: 10px 0;
     }
-    .included__list .idx { text-align: center; }
-    .included__list .item { text-align: center; line-height: 1.15; font-size: 22px; }
+    .included__list .idx { text-align: center; font-size: 11px; }
+    .included__list .item { text-align: center; line-height: 1.1; font-size: 18px; }
 
     /* Process / How it works — tighter */
-    .process__head { flex-direction: column; align-items: center; text-align: center; padding-bottom: 18px; margin-bottom: 28px; }
-    .process__title { text-align: center; font-size: 40px; }
-    .step { text-align: center; padding: 18px 0; }
-    .step__num { margin-bottom: 10px; }
-    .step__name { font-size: 28px; margin-bottom: 8px; }
-    .step__desc { margin-left: auto; margin-right: auto; font-size: 13px; }
+    .process__head { flex-direction: column; align-items: center; text-align: center; padding-bottom: 12px; margin-bottom: 16px; }
+    .process__title { text-align: center; font-size: 36px; }
+    .step { text-align: center; padding: 12px 0; }
+    .step__num { margin-bottom: 6px; }
+    .step__name { font-size: 22px; margin-bottom: 4px; }
+    .step__desc { margin-left: auto; margin-right: auto; font-size: 12px; line-height: 1.45; }
 
     /* Samples */
     .samples__head { flex-direction: column; align-items: center; text-align: center; }
     .samples__title { text-align: center; }
 
     /* About — tighter, hide BTS on mobile */
-    .about { padding: 48px 0; text-align: center; }
-    .about__title { text-align: center; font-size: 48px; }
+    .about { padding: 32px 0; text-align: center; }
+    .about__title { text-align: center; font-size: 40px; }
     .about__copy { text-align: center; }
-    .about__copy p { font-size: 15px; line-height: 1.55; margin-bottom: 16px; }
+    .about__copy p { font-size: 14px; line-height: 1.5; margin-bottom: 12px; }
     .about__copy .quote {
       border-left: 0;
       border-top: 2px solid var(--coral);
       padding-left: 0;
-      padding-top: 14px;
+      padding-top: 10px;
       text-align: center;
       max-width: 90%;
-      margin-left: auto;
-      margin-right: auto;
-      font-size: 18px;
+      margin: 14px auto;
+      font-size: 16px;
     }
     .about__bts { display: none; } /* hide BTS section on mobile to shorten */
-    .about__portrait .tag { text-align: center; display: block; }
+    .about__portrait .tag { text-align: center; display: block; font-size: 10px; }
 
     /* FAQ — tighter */
-    .faq__head { text-align: center; padding-bottom: 16px; margin-bottom: 18px; }
-    .faq__title { text-align: center; font-size: 40px; }
-    details.qa { padding: 14px 0; }
+    .faq__head { text-align: center; padding-bottom: 10px; margin-bottom: 10px; }
+    .faq__title { text-align: center; font-size: 36px; }
+    details.qa { padding: 10px 0; }
     details.qa summary {
       grid-template-columns: 1fr;
-      gap: 4px;
+      gap: 2px;
       justify-items: center;
       text-align: center;
     }
-    details.qa .qnum { text-align: center; }
-    details.qa .qtext { text-align: center; font-size: 20px; }
+    details.qa .qnum { text-align: center; font-size: 10px; }
+    details.qa .qtext { text-align: center; font-size: 17px; line-height: 1.15; }
     details.qa .qtoggle { display: none; }
     details.qa .answer {
-      margin-left: auto;
-      margin-right: auto;
+      margin: 10px auto 0;
       text-align: center;
-      max-width: 92%;
-      font-size: 14px;
-      line-height: 1.55;
+      max-width: 94%;
+      font-size: 13px;
+      line-height: 1.5;
     }
 
     /* Final CTA — tighter */
-    .finalcta { padding: 48px 0; text-align: center; }
-    .finalcta__title { text-align: center; font-size: 56px; }
-    .finalcta__lede { margin-left: auto; margin-right: auto; text-align: center; font-size: 15px; }
-    .finalcta .hero__cta-row { justify-content: center; }
+    .finalcta { padding: 32px 0; text-align: center; }
+    .finalcta__title { text-align: center; font-size: 44px; margin-bottom: 14px; }
+    .finalcta__lede { margin: 0 auto 18px; text-align: center; font-size: 13px; }
+    .finalcta .hero__cta-row { justify-content: center; gap: 10px; }
 
-    /* Calendar CTA card */
-    .calendar-cta { padding: 36px 24px; text-align: center; }
-    .calendar-cta__top { flex-direction: column-reverse; gap: 8px; align-items: center; }
-    .calendar-cta__title { text-align: center; }
-    .calendar-cta__sub { margin-left: auto; margin-right: auto; text-align: center; }
-    .calendar-cta__row { grid-template-columns: 1fr; gap: 18px; }
+    /* Calendar CTA card — tighter */
+    .calendar-cta { padding: 24px 18px; text-align: center; margin-top: 28px; }
+    .calendar-cta__top { flex-direction: column-reverse; gap: 4px; align-items: center; padding-bottom: 12px; margin-bottom: 16px; }
+    .calendar-cta__title { text-align: center; font-size: 32px; margin-bottom: 10px; }
+    .calendar-cta__sub { margin: 0 auto 18px; text-align: center; font-size: 13px; }
+    .calendar-cta__row { grid-template-columns: 1fr 1fr 1fr; gap: 8px; padding-top: 14px; }
     .calendar-cta__row .cell { align-items: center; text-align: center; }
+    .calendar-cta__row .num { font-size: 22px; }
+    .calendar-cta__row .lbl { font-size: 9px; }
 
     /* Footer — tighter */
-    footer.foot { padding: 48px 0 24px 0; }
-    .foot__grid { grid-template-columns: 1fr; text-align: center; gap: 22px; padding-bottom: 22px; margin-bottom: 18px; }
-    .foot__brand .tag { margin-left: auto; margin-right: auto; }
-    .foot__bottom { flex-direction: column; gap: 8px; text-align: center; }
+    footer.foot { padding: 28px 0 18px 0; }
+    .foot__grid { grid-template-columns: 1fr; text-align: center; gap: 14px; padding-bottom: 14px; margin-bottom: 12px; }
+    .foot__brand .mark { font-size: 28px; margin-bottom: 8px; }
+    .foot__brand .tag { margin: 0 auto; font-size: 13px; }
+    .foot__col h4 { margin-bottom: 6px; }
+    .foot__col a, .foot__col p { font-size: 13px; margin-bottom: 4px; }
+    .foot__bottom { flex-direction: column; gap: 6px; text-align: center; font-size: 10px; }
+
+    /* Samples — tighter heading */
+    .samples__head { padding-bottom: 12px; margin-bottom: 16px; }
+    .samples__title { font-size: 36px; }
   }
 </style>
 </head>
@@ -1556,6 +1572,28 @@ fbq('track', 'PageView');
     </div>
   </div>
 </footer>
+
+<!-- Meta Pixel: track booking-intent clicks as Lead/Schedule events -->
+<script>
+  (function() {
+    var bookingUrlPattern = /leadconnectorhq\.com\/widget\/booking/i;
+    document.addEventListener('click', function(e) {
+      var a = e.target.closest('a');
+      if (!a || !a.href) return;
+      // Calendar card or "Reserve / Book your slot" buttons → fire Schedule event
+      if (bookingUrlPattern.test(a.href)) {
+        if (typeof fbq === 'function') {
+          fbq('track', 'Schedule');
+          fbq('track', 'Lead');
+        }
+      }
+      // Email "Ask a question" link → soft Lead event (lower-intent)
+      if (a.href && a.href.indexOf('mailto:glpxstudio') === 0) {
+        if (typeof fbq === 'function') fbq('track', 'Contact');
+      }
+    }, { passive: true });
+  })();
+</script>
 
 </body>
 </html>
