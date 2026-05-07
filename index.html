@@ -556,8 +556,16 @@ fbq('track', 'PageView');
     color: #b8b3a8;
     text-transform: uppercase;
   }
-  @media (max-width: 760px) {
-    .samples__grid { grid-template-columns: 1fr 1fr; }
+  @media (max-width: 880px) {
+    .samples__grid { grid-template-columns: 1fr 1fr; gap: 14px; }
+  }
+  @media (max-width: 600px) {
+    /* Mobile: single column, full-width images, hide overlay labels for clean visuals */
+    .samples__grid { grid-template-columns: 1fr; gap: 16px; }
+    .frame .frame__label,
+    .frame .frame__num {
+      display: none;
+    }
   }
 
   /* ============================================================
@@ -624,6 +632,48 @@ fbq('track', 'PageView');
     border-left: 2px solid var(--coral);
     padding-left: 20px;
     margin: 28px 0;
+  }
+  .about__bts {
+    margin-top: 36px;
+    border-top: 1px solid #ffffff22;
+    padding-top: 28px;
+  }
+  .about__bts-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 16px;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .about__bts-label {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--coral);
+  }
+  .about__bts-cap {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #8a857c;
+  }
+  .about__bts img {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: contrast(1.05);
+  }
+  .about__bts p {
+    margin: 14px 0 0 0;
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #c8c4bc;
+    max-width: 56ch;
   }
   @media (max-width: 760px) {
     .about__grid { grid-template-columns: 1fr; gap: 28px; }
@@ -1115,32 +1165,32 @@ fbq('track', 'PageView');
 
     <div class="samples__grid">
       <figure class="frame" aria-label="Business headshot — Orlando">
-        <img src="sample-1.jpg" alt="Professional business headshot of an attorney in a suit, photographed in Orlando" loading="lazy" />
+        <img src="sample-1.jpg" alt="Professional business headshot of a man in a navy suit and white shirt, sharp studio lighting" loading="lazy" />
         <span class="frame__num">01 / 06</span>
         <figcaption class="frame__label">Headshot · Orlando</figcaption>
       </figure>
       <figure class="frame" aria-label="Business headshot — Orlando">
-        <img src="sample-2.jpg" alt="Professional business headshot, executive portrait" loading="lazy" />
+        <img src="sample-2.jpg" alt="Professional headshot of a woman in a periwinkle dress, clean white backdrop" loading="lazy" />
         <span class="frame__num">02 / 06</span>
         <figcaption class="frame__label">Headshot · Orlando</figcaption>
       </figure>
       <figure class="frame" aria-label="Business headshot — Orlando">
-        <img src="sample-3.jpg" alt="Professional headshot for a law firm, suited subject, clean studio backdrop" loading="lazy" />
+        <img src="sample-3.jpg" alt="Realtor headshot, man in a navy blazer and white shirt, dark studio backdrop" loading="lazy" />
         <span class="frame__num">03 / 06</span>
         <figcaption class="frame__label">Headshot · Orlando</figcaption>
       </figure>
       <figure class="frame" aria-label="Business headshot — Orlando">
-        <img src="sample-4.jpg" alt="Corporate headshot, professional posed for LinkedIn-quality portrait" loading="lazy" />
+        <img src="sample-4.jpg" alt="Corporate headshot of a woman in a white blazer over a blue shirt, classic professional pose" loading="lazy" />
         <span class="frame__num">04 / 06</span>
         <figcaption class="frame__label">Headshot · Orlando</figcaption>
       </figure>
       <figure class="frame" aria-label="Business headshot — Orlando">
-        <img src="sample-5.jpg" alt="Professional headshot, business portrait with clean lighting" loading="lazy" />
+        <img src="sample-5.jpg" alt="Branding portrait of a man with glasses and a beard leaning on a chair, relaxed studio mood" loading="lazy" />
         <span class="frame__num">05 / 06</span>
         <figcaption class="frame__label">Headshot · Orlando</figcaption>
       </figure>
       <figure class="frame" aria-label="Business headshot — Orlando">
-        <img src="sample-6.jpg" alt="Executive headshot, sharply lit professional portrait" loading="lazy" />
+        <img src="sample-6.jpg" alt="Executive headshot of a woman with long dark hair in a black blazer, classic LinkedIn-style portrait" loading="lazy" />
         <span class="frame__num">06 / 06</span>
         <figcaption class="frame__label">Headshot · Orlando</figcaption>
       </figure>
@@ -1183,6 +1233,15 @@ fbq('track', 'PageView');
           You need fifteen good minutes, decent light, and someone who knows where to
           put your hands.
         </p>
+
+        <figure class="about__bts">
+          <div class="about__bts-head">
+            <span class="about__bts-label">+ Behind the Scenes</span>
+            <span class="about__bts-cap">Plate 06 · Studio</span>
+          </div>
+          <img src="bts.jpg" alt="Client mid-session at the studio — lighting setup with key, fill, and reflector visible around her" loading="lazy" />
+          <p>The studio at Santoku — same lights, same setup, every time. Consistency is half the job.</p>
+        </figure>
       </div>
     </div>
   </div>
