@@ -501,8 +501,8 @@ fbq('track', 'PageView');
   .samples__title { font-size: clamp(40px, 6vw, 76px); margin: 0; }
   .samples__grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 18px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
   }
   .frame {
     aspect-ratio: 4 / 5;
@@ -556,8 +556,11 @@ fbq('track', 'PageView');
     color: #b8b3a8;
     text-transform: uppercase;
   }
-  @media (max-width: 880px) {
-    .samples__grid { grid-template-columns: 1fr 1fr; gap: 14px; }
+  @media (max-width: 1080px) {
+    .samples__grid { grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  }
+  @media (max-width: 760px) {
+    .samples__grid { grid-template-columns: 1fr 1fr; gap: 12px; }
   }
   @media (max-width: 600px) {
     /* Mobile: single column, full-width images, hide overlay labels for clean visuals */
@@ -977,7 +980,7 @@ fbq('track', 'PageView');
 
     <p class="hero__sub">
       A <strong>15-minute studio session</strong> at Santoku Studios. One fully edited,
-      print-ready portrait — the photo your LinkedIn, your bio page, and your mother
+      print-ready portrait, the photo your LinkedIn, your bio page, and your mother
       have been quietly waiting for.
     </p>
 
@@ -990,7 +993,7 @@ fbq('track', 'PageView');
     </div>
 
     <p class="serif-italic hero__aside">
-      "A great headshot is not a flattering photograph — it is an honest one,
+      "A great headshot is not a flattering photograph. It is an honest one,
       taken on a good day, by someone who was paying attention."
     </p>
 
@@ -1004,7 +1007,7 @@ fbq('track', 'PageView');
         <span class="lbl">Fully Edited Final</span>
       </div>
       <div class="cell">
-        <span class="num">3–5<span class="accent">d</span></span>
+        <span class="num">3 to 5<span class="accent">d</span></span>
         <span class="lbl">Turnaround</span>
       </div>
     </div>
@@ -1035,7 +1038,7 @@ fbq('track', 'PageView');
         <h3 class="head"><span class="accent">Santoku</span> Studios</h3>
         <p class="body">
           Sessions run from a clean professional studio in Orlando. Backdrop, lighting,
-          direction — all handled.
+          direction. All handled.
         </p>
       </div>
       <div class="proof__cell">
@@ -1060,7 +1063,7 @@ fbq('track', 'PageView');
       </h2>
       <p class="included__lede">
         One price. No upsells at the door. Everything below is part of the
-        <strong>$100 limited release</strong> — capped at 100 spots so the calendar
+        <strong>$100 limited release</strong>, capped at 100 spots so the calendar
         stays honest.
       </p>
     </div>
@@ -1088,14 +1091,14 @@ fbq('track', 'PageView');
       </li>
       <li>
         <span class="idx">05</span>
-        <span class="item">Delivery in 3–5 Business Days</span>
+        <span class="item">Delivery in 3 to 5 Business Days</span>
         <span class="meta">Turnaround</span>
       </li>
     </ul>
 
     <p class="serif-italic" style="margin-top: 32px; max-width: 56ch;">
       Want a second outfit, additional retouched images, or a full branding shoot?
-      Add-ons available — additional retouched photos start at $45 each.
+      Add-ons available. Additional retouched photos start at $45 each.
     </p>
   </div>
 </section>
@@ -1136,14 +1139,14 @@ fbq('track', 'PageView');
         <h3 class="step__name">Shoot.</h3>
         <p class="step__desc">
           15 minutes at Santoku Studios in Orlando. Lighting, backdrop, and direction
-          handled by Gerson.
+          all handled by Gerson.
         </p>
       </div>
       <div class="step">
         <div class="step__num">04 / Step</div>
         <h3 class="step__name">Deliver.</h3>
         <p class="step__desc">
-          One fully edited, print-ready portrait sent to you within 3–5 business days.
+          One fully edited, print-ready portrait sent to you within 3 to 5 business days.
           Ready to upload everywhere.
         </p>
       </div>
@@ -1164,34 +1167,44 @@ fbq('track', 'PageView');
     </div>
 
     <div class="samples__grid">
-      <figure class="frame" aria-label="Business headshot — Orlando">
+      <figure class="frame" aria-label="Business headshot in Orlando">
         <img src="sample-1.jpg" alt="Executive portrait of a man in a navy suit and red tie, polished studio shot" loading="lazy" />
-        <span class="frame__num">01 / 06</span>
+        <span class="frame__num">01 / 08</span>
         <figcaption class="frame__label">Headshot · Orlando</figcaption>
       </figure>
-      <figure class="frame" aria-label="Business headshot — Orlando">
+      <figure class="frame" aria-label="Business headshot in Orlando">
         <img src="sample-2.jpg" alt="Professional headshot of a woman in a periwinkle dress, clean white backdrop" loading="lazy" />
-        <span class="frame__num">02 / 06</span>
+        <span class="frame__num">02 / 08</span>
         <figcaption class="frame__label">Headshot · Orlando</figcaption>
       </figure>
-      <figure class="frame" aria-label="Business headshot — Orlando">
+      <figure class="frame" aria-label="Business headshot in Orlando">
         <img src="sample-3.jpg" alt="Classic business headshot, man in glasses, navy suit and gold tie, clean studio backdrop" loading="lazy" />
-        <span class="frame__num">03 / 06</span>
+        <span class="frame__num">03 / 08</span>
         <figcaption class="frame__label">Headshot · Orlando</figcaption>
       </figure>
-      <figure class="frame" aria-label="Business headshot — Orlando">
+      <figure class="frame" aria-label="Business headshot in Orlando">
         <img src="sample-4.jpg" alt="Corporate headshot of a woman in a white blazer over a blue shirt, classic professional pose" loading="lazy" />
-        <span class="frame__num">04 / 06</span>
+        <span class="frame__num">04 / 08</span>
         <figcaption class="frame__label">Headshot · Orlando</figcaption>
       </figure>
-      <figure class="frame" aria-label="Business headshot — Orlando">
+      <figure class="frame" aria-label="Business headshot in Orlando">
         <img src="sample-5.jpg" alt="Branding portrait of a man with glasses and a beard leaning on a chair, relaxed studio mood" loading="lazy" />
-        <span class="frame__num">05 / 06</span>
+        <span class="frame__num">05 / 08</span>
         <figcaption class="frame__label">Headshot · Orlando</figcaption>
       </figure>
-      <figure class="frame" aria-label="Business headshot — Orlando">
+      <figure class="frame" aria-label="Business headshot in Orlando">
         <img src="sample-6.jpg" alt="Executive headshot of a woman with long dark hair in a black blazer, classic LinkedIn-style portrait" loading="lazy" />
-        <span class="frame__num">06 / 06</span>
+        <span class="frame__num">06 / 08</span>
+        <figcaption class="frame__label">Headshot · Orlando</figcaption>
+      </figure>
+      <figure class="frame" aria-label="Business headshot in Orlando">
+        <img src="sample-7.jpg" alt="Professional headshot of a man in a navy suit and white shirt, sharp studio lighting" loading="lazy" />
+        <span class="frame__num">07 / 08</span>
+        <figcaption class="frame__label">Headshot · Orlando</figcaption>
+      </figure>
+      <figure class="frame" aria-label="Business headshot in Orlando">
+        <img src="sample-8.jpg" alt="Realtor headshot, man with curly hair in a navy blazer and white shirt, dark studio backdrop" loading="lazy" />
+        <span class="frame__num">08 / 08</span>
         <figcaption class="frame__label">Headshot · Orlando</figcaption>
       </figure>
     </div>
@@ -1217,7 +1230,7 @@ fbq('track', 'PageView');
         <p>
           I'm <strong>Gerson Lopez</strong>, founder of <strong>GLPX Studio</strong>.
           Most of my career has been spent making people who are used to being looked at
-          — recording artists, founders, athletes — actually feel seen on camera.
+          (recording artists, founders, athletes) actually feel seen on camera.
           Album covers for <strong>Alex Rose</strong>, <strong>Anuel AA</strong>, and
           <strong>Jerry Rivera</strong> came out of that work.
         </p>
@@ -1226,7 +1239,7 @@ fbq('track', 'PageView');
           professionals in Orlando are using a phone selfie or a 2018 LinkedIn photo,
           and they deserve better. So once a quarter I open up 100 spots, run them out
           of <strong>Santoku Studios</strong>, and let the same eye that shot the
-          covers handle a 15-minute portrait for you.
+          covers handle a 15 minute portrait for you.
         </p>
         <p class="quote">
           You don't need a four-hour branding shoot to look like a serious person.
@@ -1239,8 +1252,8 @@ fbq('track', 'PageView');
             <span class="about__bts-label">+ Behind the Scenes</span>
             <span class="about__bts-cap">Plate 06 · Studio</span>
           </div>
-          <img src="bts.jpg" alt="Client mid-session at the studio — lighting setup with key, fill, and reflector visible around her" loading="lazy" />
-          <p>The studio at Santoku — same lights, same setup, every time. Consistency is half the job.</p>
+          <img src="bts.jpg" alt="Client mid-session at the studio, lighting setup with key, fill, and reflector visible around her" loading="lazy" />
+          <p>The studio at Santoku, same lights, same setup, every time. Consistency is half the job.</p>
         </figure>
       </div>
     </div>
@@ -1268,7 +1281,7 @@ fbq('track', 'PageView');
         Almost no one thinks they are. The job of a portrait photographer is to know
         which side of your face you like, where the light should be, and what to say
         between frames so you stop holding your breath. That's what the 15 minutes are
-        for. You don't need to be photogenic — you just need to show up.
+        for. You don't need to be photogenic. You just need to show up.
       </p>
     </details>
 
@@ -1281,7 +1294,7 @@ fbq('track', 'PageView');
       <p class="answer">
         Solid colors over patterns. Something that fits well at the shoulders. A
         jacket or layer adds structure for business-style headshots. Once you book,
-        you'll get a short style guide with examples — and a "what not to wear" note.
+        you'll get a short style guide with examples, plus a "what not to wear" note.
       </p>
     </details>
 
@@ -1292,8 +1305,8 @@ fbq('track', 'PageView');
         <span class="qtoggle" aria-hidden="true"></span>
       </summary>
       <p class="answer">
-        3–5 business days. You'll receive your one fully edited, print-ready portrait
-        as a high-resolution download — ready for LinkedIn, your website, your bio
+        3 to 5 business days. You'll receive your one fully edited, print-ready portrait
+        as a high-resolution download, ready for LinkedIn, your website, your bio
         page, and any print collateral.
       </p>
     </details>
@@ -1319,7 +1332,7 @@ fbq('track', 'PageView');
       <p class="answer">
         Yes. Additional retouched, print-ready images are <strong>$45 each</strong>.
         You can pick favorites from your session after the shoot. If you want a
-        broader branding setup — multiple outfits, more frames, more time — see the
+        broader branding setup (multiple outfits, more frames, more time), see the
         full price guide at <a href="https://glpxstudio.com" style="color:var(--coral); text-decoration: underline;">glpxstudio.com</a>.
       </p>
     </details>
@@ -1364,7 +1377,7 @@ fbq('track', 'PageView');
         Pick your<br /><span class="accent">15-minute slot.</span>
       </div>
       <p class="calendar-cta__sub">
-        Click anywhere in this card. The calendar opens in a new window — pick a
+        Click anywhere in this card. The calendar opens in a new window. Pick a
         time that works, pay the $100, lock the date.
       </p>
       <div class="calendar-cta__row">
