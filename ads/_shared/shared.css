@@ -1,8 +1,8 @@
-/* GLPX 100 Headshots ad design system — shared across all 4:5 statics */
+/* GLPX 100 Headshots ad design system — system-font safe */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html, body { width: 1080px; height: 1350px; overflow: hidden; background: #F0EDE8; }
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Arial", sans-serif;
   color: #111111;
   position: relative;
   display: flex;
@@ -11,20 +11,21 @@ body {
 
 .corner-tl, .corner-tr, .corner-bl, .corner-br {
   position: absolute;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: "SF Mono", "Menlo", "Consolas", "Courier New", monospace;
   font-size: 16px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 700;
 }
 .corner-tl { top: 40px; left: 56px; color: #E76F51; }
 .corner-tr { top: 40px; right: 56px; color: #E76F51; }
-.corner-bl { bottom: 40px; left: 56px; color: rgba(17,17,17,0.5); font-weight: 500; }
-.corner-br { bottom: 40px; right: 56px; color: rgba(17,17,17,0.5); font-weight: 500; }
+.corner-bl { bottom: 40px; left: 56px; color: rgba(17,17,17,0.55); font-weight: 600; }
+.corner-br { bottom: 40px; right: 56px; color: rgba(17,17,17,0.55); font-weight: 600; }
 
 .hook-display {
-  font-family: 'Anton', sans-serif;
-  line-height: 0.93;
+  font-family: "Impact", "Arial Black", "Helvetica Neue", sans-serif;
+  font-weight: 900;
+  line-height: 0.95;
   letter-spacing: -0.02em;
   text-transform: uppercase;
   color: #111111;
@@ -32,33 +33,36 @@ body {
 .hook-display .accent { color: #E76F51; }
 
 .specs-row {
-  font-family: 'Inter', sans-serif;
-  font-weight: 700;
-  font-size: 22px;
+  font-family: -apple-system, "Helvetica Neue", "Arial", sans-serif;
+  font-weight: 800;
+  font-size: 24px;
   text-align: center;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.03em;
   color: #111111;
+  text-transform: uppercase;
 }
-.specs-row .dim { color: rgba(17,17,17,0.55); font-weight: 500; }
+.specs-row .dim { color: rgba(17,17,17,0.55); font-weight: 600; }
 
 .cta-pill {
   background: #E76F51;
   color: #F0EDE8;
-  font-family: 'Anton', sans-serif;
-  font-size: 36px;
+  font-family: "Impact", "Arial Black", "Helvetica Neue", sans-serif;
+  font-weight: 900;
+  font-size: 40px;
   letter-spacing: 0.04em;
-  text-transform: uppercase;
-  padding: 22px 32px;
+  padding: 26px 32px;
   text-align: center;
-  border: 2px solid #111111;
+  border: 3px solid #111111;
+  text-transform: uppercase;
 }
 
 .frame-tag {
-  background: rgba(0,0,0,0.85);
+  background: rgba(0,0,0,0.88);
   color: #F0EDE8;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 12px;
-  letter-spacing: 0.12em;
+  font-family: "SF Mono", "Menlo", "Courier New", monospace;
+  font-size: 13px;
+  letter-spacing: 0.14em;
   padding: 8px 12px;
   text-transform: uppercase;
+  font-weight: 700;
 }

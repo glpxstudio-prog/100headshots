@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html><head><meta charset="UTF-8" />
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=JetBrains+Mono:wght@500;600&family=Inter:wght@500;700&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="../_shared/shared.css" />
 <style>
   body { padding: 110px 56px 90px; gap: 32px; }
-  .heading { font-family: 'Anton', sans-serif; font-size: 132px; line-height: 0.93; letter-spacing: -0.02em; text-transform: uppercase; }
+  .heading { font-family: "Impact", "Arial Black", "Helvetica Neue", sans-serif; font-weight: 900; font-size: 132px; line-height: 0.93; letter-spacing: -0.02em; text-transform: uppercase; }
   .heading .accent { color: #E76F51; }
   .included { display: flex; flex-direction: column; gap: 0; border: 2px solid #111111; }
   .included .row { display: grid; grid-template-columns: 80px 1fr; align-items: center; padding: 18px 22px; border-bottom: 2px solid #111111; }
   .included .row:last-child { border-bottom: none; }
-  .included .num { font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: 600; letter-spacing: 0.12em; color: #E76F51; }
-  .included .label { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 22px; letter-spacing: 0.01em; color: #111111; text-transform: uppercase; }
+  .included .num { font-family: "SF Mono", "Menlo", "Courier New", monospace; font-weight: 700; font-size: 14px; font-weight: 600; letter-spacing: 0.12em; color: #E76F51; }
+  .included .label { font-family: -apple-system, "Helvetica Neue", sans-serif; font-weight: 700; font-size: 22px; letter-spacing: 0.01em; color: #111111; text-transform: uppercase; }
   .calendar-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
   .day-cell { background: #111111; color: #F0EDE8; padding: 14px 12px; text-align: center; border: 2px solid #111111; }
-  .day-cell .num { font-family: 'Anton', sans-serif; font-size: 48px; line-height: 1; color: #F0EDE8; }
-  .day-cell .label { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; margin-top: 4px; color: rgba(240,237,232,0.7); }
+  .day-cell .num { font-family: "Impact", "Arial Black", "Helvetica Neue", sans-serif; font-weight: 900; font-size: 48px; line-height: 1; color: #F0EDE8; }
+  .day-cell .label { font-family: "SF Mono", "Menlo", "Courier New", monospace; font-weight: 700; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; margin-top: 4px; color: rgba(240,237,232,0.7); }
   .footer { margin-top: auto; }
 </style></head>
 <body>
