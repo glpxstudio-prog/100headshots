@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8" />
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=JetBrains+Mono:wght@500;600&family=Inter:wght@500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="_shared.css" />
+<style>
+  body { padding: 0; }
+  .frame { width: 100%; height: 100%; position: relative; overflow: hidden; }
+  .frame img { width: 100%; height: 100%; object-fit: cover; object-position: center 18%; }
+  .overlay-top { position: absolute; top: 40px; left: 56px; right: 56px; display: flex; justify-content: space-between; }
+  .overlay-top span { font-family: 'JetBrains Mono', monospace; font-size: 16px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 600; color: #F0EDE8; text-shadow: 0 1px 8px rgba(0,0,0,0.6); }
+  .overlay-top .left { color: #E76F51; }
+  .badge {
+    position: absolute;
+    bottom: 130px;
+    left: 56px;
+    background: #E76F51;
+    color: #F0EDE8;
+    font-family: 'Anton', sans-serif;
+    font-size: 28px;
+    letter-spacing: 0.04em;
+    padding: 12px 18px;
+    text-transform: uppercase;
+    border: 2px solid #111111;
+  }
+  .strip {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    background: #111111;
+    color: #F0EDE8;
+    padding: 24px 56px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .strip .role {
+    font-family: 'Anton', sans-serif;
+    font-size: 36px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+  .strip .meta {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(240,237,232,0.65);
+  }
+</style></head>
+<body>
+  <div class="frame">
+    <img src="../100-headshots-assets/gallery-02.jpg" alt="Realtor headshot" />
+    <div class="overlay-top">
+      <span class="left">● Card 02 / 05</span>
+      <span>Orlando · 2026</span>
+    </div>
+    <div class="badge">$100 · 15 min</div>
+    <div class="strip">
+      <span class="role">Realtor</span>
+      <span class="meta">LinkedIn-ready · 1 retouched final</span>
+    </div>
+  </div>
+</body></html>

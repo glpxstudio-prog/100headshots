@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8" />
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=JetBrains+Mono:wght@500;600&family=Inter:wght@500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="_shared.css" />
+<style>
+  body { padding: 100px 56px 80px; gap: 36px; }
+  .hook { font-size: 132px; }
+  .portrait-frame { width: 100%; height: 540px; overflow: hidden; border: 2px solid #111111; position: relative; flex-shrink: 0; }
+  .portrait-frame img { width: 100%; height: 100%; object-fit: cover; object-position: center 8%; }
+  .portrait-frame .tag { position: absolute; top: 16px; right: 16px; }
+  .swipe { display: flex; align-items: center; justify-content: center; gap: 12px; font-family: 'JetBrains Mono', monospace; font-size: 16px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(17,17,17,0.7); margin-top: auto; }
+  .swipe .arrow { font-size: 22px; color: #E76F51; }
+</style></head>
+<body>
+  <span class="corner-tl">● Card 01 / 05</span>
+  <span class="corner-tr">Vol. 01 · Orlando</span>
+
+  <div>
+    <div class="hook hook-display">What $100<br />looks like<br /><span class="accent">in Orlando.</span></div>
+  </div>
+
+  <div class="portrait-frame">
+    <img src="../100-headshots-assets/gallery-01.jpg" alt="GLPX Studio Orlando headshot" />
+    <span class="frame-tag tag">Orlando · 2026</span>
+  </div>
+
+  <div class="swipe"><span>Swipe to see the work</span><span class="arrow">→</span></div>
+
+  <span class="corner-bl">100headshots.com</span>
+  <span class="corner-br">GLPX Studio</span>
+</body></html>

@@ -1,0 +1,64 @@
+/* GLPX 100 Headshots ad design system — shared across all 4:5 statics */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { width: 1080px; height: 1350px; overflow: hidden; background: #F0EDE8; }
+body {
+  font-family: 'Inter', sans-serif;
+  color: #111111;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.corner-tl, .corner-tr, .corner-bl, .corner-br {
+  position: absolute;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 16px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.corner-tl { top: 40px; left: 56px; color: #E76F51; }
+.corner-tr { top: 40px; right: 56px; color: #E76F51; }
+.corner-bl { bottom: 40px; left: 56px; color: rgba(17,17,17,0.5); font-weight: 500; }
+.corner-br { bottom: 40px; right: 56px; color: rgba(17,17,17,0.5); font-weight: 500; }
+
+.hook-display {
+  font-family: 'Anton', sans-serif;
+  line-height: 0.93;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: #111111;
+}
+.hook-display .accent { color: #E76F51; }
+
+.specs-row {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #111111;
+}
+.specs-row .dim { color: rgba(17,17,17,0.55); font-weight: 500; }
+
+.cta-pill {
+  background: #E76F51;
+  color: #F0EDE8;
+  font-family: 'Anton', sans-serif;
+  font-size: 36px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 22px 32px;
+  text-align: center;
+  border: 2px solid #111111;
+}
+
+.frame-tag {
+  background: rgba(0,0,0,0.85);
+  color: #F0EDE8;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  padding: 8px 12px;
+  text-transform: uppercase;
+}
